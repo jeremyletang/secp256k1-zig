@@ -59,5 +59,5 @@ pub fn build(b: *std.Build) void {
     test_step.dependOn(&run_main_tests.step);
 
     // Exported modules.
-    _ = b.addModule("zig-eth-secp256k1", .{ .source_file = .{ .path = "src/secp256k1.zig" } });
+    _ = b.addModule("zig-eth-secp256k1", .{ .root_source_file = .{ .path = "src/secp256k1.zig" } });
 }
